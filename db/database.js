@@ -8,10 +8,17 @@ const con = mysql.createConnection({
   
   con.connect(function(err) {
     if (err) throw err;
+    
+
+    // if success connecting
     console.log("Connected!");
-    // con.query("CREATE DATABASE employees", function (err, result) {
-    //   if (err) throw err;
-    //   console.log("Database created");
-    // });
+
+    // then create my 
+    con.query("CREATE DATABASE employees", function (err, result) {
+      if (err) throw err;
+      console.log("Database created");
+    });
+
+
 });
 module.exports = con;
