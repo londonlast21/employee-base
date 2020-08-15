@@ -4,7 +4,7 @@ const cTable = require('console.table');
 const con = require('./db/database');
 
 // create the connection to localHost
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3306;
 
 // Start server after DB connection
 con.on('open', () => {
