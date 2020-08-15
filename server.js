@@ -1,22 +1,25 @@
 // npm to require
 const inquirer = require('inquirer');
 const cTable = require('console.table');
-const con = require('./db/database');
 const express = require('express');
+
+// express stuff start
+const app = express();
+
+
+
+// create the connection to localHost
+const PORT = process.env.PORT || 3306;
+
+
+// Express middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // require connection to my database
 const db = require('./db/database');
 // require connection to my apiroutes
 const apiRoutes = require('./routes/apiRoutes');
-
-// create the connection to localHost
-const PORT = process.env.PORT || 3306;
-
-// express stuff start
-const app = express();
-// Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
 // use my api routes
 app.use('/api', apiRoutes);
