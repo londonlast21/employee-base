@@ -14,7 +14,7 @@ VALUES
 /* role table data */
 INSERT INTO role (title, salary ) --needs dept id
 VALUES
-('Manager', 45.5 + 'K' ), -- role 1
+('Manager', 45.5 ), -- role 1
 ('Assistant Head Chair', 37.6 ), -- role 2
 ('Board Member', 34.8 ), --3
 ('Professor', 33.0 ), -- 4
