@@ -52,7 +52,7 @@ async function init() {
 
 async function intro() {
 
-const answer =   inquirer.prompt([
+const answer = await inquirer.prompt([
   {
     type: 'list',
     name: 'selectMenu',
@@ -69,47 +69,49 @@ const answer =   inquirer.prompt([
   }
 ]);
 
+console.log(answer);
+
 // switch to handle answers
-switch (answer) {
+switch (answer.selectMenu) {
   case 'View All Departments':
+    console.log("hello");
     
-    //await viewDepartments();
-    //intro();
-    console.log;
+    viewDepartments();
     
     break;
 
-  case 'view all roles':
+  case 'View All Roles':
     // do things
     await viewRoles();
     break;
 
-  case 'view all employees':
+  case 'View All Employees':
     // do things
     await viewEmployees();
     break;
   
-  case 'add a department':
+  case 'Add a Department':
     // do things
     await addDepartment();
     break;
 
-  case 'add a role':
+  case 'Add a Role':
     // do things
     await addRole();
     break;
 
-  case 'add an employee':
+  case 'Add an Employee':
     // do things
     await addEmployee();
     break;
 
-  case 'update an employee role':
+  case 'Update an Employee Role':
     // do things
     await updateEmployeeRole();
     break;
   
   default:
+    console.log("error no selection made");
     break;
   }
 }
