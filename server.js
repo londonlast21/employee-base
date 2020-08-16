@@ -66,41 +66,42 @@ const answer =  await inquirer.prompt([
 ]);
 
 // switch to handle answers
-switch (answer.action.toLowerCase()){
-  case 'view all departments':
+switch (answer) {
+  case 'View All Departments':
     // do things
-    console.log('chose view departments');
-     viewDepartments();
+    await viewDepartments();
+    app();
+    
     break;
 
   case 'view all roles':
     // do things
-    viewRoles();
+    await viewRoles();
     break;
 
   case 'view all employees':
     // do things
-    viewEmployees();
+    await viewEmployees();
     break;
   
   case 'add a department':
     // do things
-    addDepartment();
+    await addDepartment();
     break;
 
   case 'add a role':
     // do things
-    addRole();
+    await addRole();
     break;
 
   case 'add an employee':
     // do things
-    addEmployee();
+    await addEmployee();
     break;
 
   case 'update an employee role':
     // do things
-    updateEmployeeRole();
+    await updateEmployeeRole();
     break;
   
 
