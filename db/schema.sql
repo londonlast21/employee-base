@@ -16,17 +16,18 @@ CREATE TABLE role (
     title VARCHAR(30) NOT NULL,
     salary DECIMAL,
     department_id INTEGER UNSIGNED,
+    CONSTRAINT uc_department UNIQUE (id),
     CONSTRAINT fk_department FOREIGN KEY (id) REFERENCES department(id) ON DELETE CASCADE
 
     
 );
 
-/*this table is only one not generating; error with roleid?*/
 CREATE TABLE employee (
     id INTEGER PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     role_id INTEGER UNSIGNED,
+    CONSTRAINT uc_role UNIQUE (id),
     CONSTRAINT fk_role FOREIGN KEY (id) REFERENCES role(id) ON DELETE CASCADE,
     manager_id INTEGER 
 );

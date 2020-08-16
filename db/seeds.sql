@@ -15,7 +15,6 @@ VALUES
 INSERT INTO role (title, salary, department_id) 
 VALUES
 
-
 ('Manager', '45.5', 1 ), 
 ('Assistant Head Chair', '37.6', 1 ), 
 ('Board Member', '34.8', 1 ),
