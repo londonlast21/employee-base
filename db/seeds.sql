@@ -19,7 +19,7 @@ VALUES
 ('Assistant Head Chair', '37.6', 1 ), 
 ('Board Member', '34.8', 1 ),
 ('Professor', '33.0', 1 ), 
-('Teaching Assistant', '22.0', 1 ); 
+('Teaching Assistant', '22.0', 1 ), 
 
 
 ('Manager', '43.5', 2),
