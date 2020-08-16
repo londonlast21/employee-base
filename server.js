@@ -75,7 +75,7 @@ switch (answer) {
     
     //await viewDepartments();
     //intro();
-    console.log(query);
+    console.log;
     
     break;
 
