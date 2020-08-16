@@ -45,8 +45,6 @@ app.use((req, res) => {
   res.status(404).end();
 });
 
-
-
 // intiate CLI prompt
 async function init() {
 
@@ -64,14 +62,15 @@ const answer =  await inquirer.prompt([
     'Add an Employee', 
     'Update an Employee Role'
     ]
-  },
+  }
 ]);
 
 // switch to handle answers
-switch (answer){
+switch (answer.action.toLowerCase()){
   case 'view all departments':
     // do things
-    await viewDepartments();
+    console.log('chose view departments');
+     viewDepartments();
     break;
 
   case 'view all roles':
