@@ -5,11 +5,21 @@ const db = require('../../db/database');
 
 // get all departments
 function viewDepartments() {
-    console.log("hi");
-    // let query = `SELECT * FROM department`;
-    // const rows = await.db.query(query);
-    // let departmentNames = [];
-    // for ()
+    router.get('/department', (req, res) => {
+        const sql = `SELECT * FROM department`;
+        const params = [];
+        db.all(sql, params, (err, rows) => {
+          if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+          }
+      
+          res.json({
+            message: 'success',
+            data: rows
+          });
+        });
+    });
 };
 
 

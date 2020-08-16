@@ -52,7 +52,7 @@ async function init() {
 
 async function intro() {
 
-const answer =  await inquirer.prompt([
+const answer =   inquirer.prompt([
   {
     type: 'list',
     name: 'selectMenu',
@@ -72,9 +72,10 @@ const answer =  await inquirer.prompt([
 // switch to handle answers
 switch (answer) {
   case 'View All Departments':
-    // do things
-    await viewDepartments();
-    intro();
+    
+    //await viewDepartments();
+    //intro();
+    console.log(query);
     
     break;
 
