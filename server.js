@@ -30,8 +30,23 @@ app.use((req, res) => {
 });
 
 // Start server after DB connection
-db.on('open', () => {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+// db.on('open', () => {
+//   app.listen(PORT, () => {
+//     console.log(`Server running on port ${PORT}`);
+//   });
+  
+// });
+
+// intiate CLI prompt
+inquirer
+  .prompt([
+    {
+    type: 'list',
+    name: 'selectMenu',
+    message: 'Choose an option',
+    choices: ['View All Departments', 'View All Roles', 'View All Employees', 'Add a Department', 'Add a Role', 'Add an Employee', 'Update an Employee Role'],
+    },
+  ])
+  .then(answers => {
+    console.log(answers);
   });
-});

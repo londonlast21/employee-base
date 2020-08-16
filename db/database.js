@@ -11,12 +11,12 @@ const con = mysql.createConnection({
     
 
     // if success connecting
-    console.log("Connected!");
+    //console.log("Connected!");
 
     // then create my 
     con.query("CREATE DATABASE employees", function (err, result) {
       if (err) throw err;
-      console.log("Database created");
+      //console.log("Database created");
     });
 
 
