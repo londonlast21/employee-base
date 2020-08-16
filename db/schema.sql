@@ -22,7 +22,11 @@ CREATE TABLE employee (
     employee_id INTEGER PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
-    role_id INTEGER UNSIGNED,
-    FOREIGN KEY (role_id) REFERENCES role(roleID) ON DELETE CASCADE,
+
+   [CONSTRAINT roleid] 
+   FOREIGN KEY (role_id)
+   [ON DELETE CASCADE]
+   [ON UPDATE CASCADE],
+   
     manager_id INTEGER 
 );
