@@ -37,7 +37,7 @@ const {
 const {
   viewEmployees,
   addEmployee,
-  updateEmployee
+  updateEmployeeRole
 } = require ('./routes/apiRoutes/employeeRoute');
 
 
@@ -69,30 +69,37 @@ const answer = inquirer.prompt([
 switch(answer.action.toLowerCase()) {
   case 'view all departments':
     // do things
+    viewDepartments();
     break;
 
   case 'view all roles':
     // do things
+    viewRoles();
     break;
 
   case 'view all employees':
     // do things
+    viewEmployees();
     break;
   
   case 'add a department':
     // do things
+    addDepartment();
     break;
 
   case 'add a role':
     // do things
+    addRole();
     break;
 
   case 'add an employee':
     // do things
+    addEmployee();
     break;
 
   case 'update an employee role':
     // do things
+    updateEmployeeRole();
     break;
   
 
