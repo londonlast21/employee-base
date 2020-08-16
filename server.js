@@ -97,7 +97,7 @@ switch (answer.selectMenu) {
     console.log("error no selection made");
     break;
   }
-}
+};
 
 
 init();
