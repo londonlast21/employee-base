@@ -11,8 +11,13 @@ VALUES
 
 
 
--- /* role table data */
--- INSERT INTO role (title, salary, )
--- VALUES
+/* role table data */
+INSERT INTO role (title, salary ) --needs dept id
+VALUES
+('Manager', 45.5 + 'K' )
+('Assistant Head Chair', 37.6 )
+('Board Member', 34.8 )
+('Professor', 33.0 )
+('Teaching Assistant', 22.0 )
 
 /* employee table data */
