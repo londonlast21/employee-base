@@ -8,21 +8,12 @@ const con = mysql.createConnection({
   
   con.connect(function(err) {
     if (err) throw err;
-    
 
-    // if success connecting
-    //console.log("Connected!");
-
-  // then create my 
+  // then create my database
   con.query("CREATE DATABASE employeeBank", function (err, result) {
       if (err) throw err;
-      //console.log("Database created");
+    
   });
-  // con.query("CREATE TABLE /departments", function (err, result) {
-  //   if (err) throw err;
-  //   console.log("dept table created");
-  // });
   
-
 });
 module.exports = con;

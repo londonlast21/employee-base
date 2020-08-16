@@ -5,12 +5,8 @@ const express = require('express');
 
 // express stuff start
 const app = express();
-
-
-
 // create the connection to localHost
 const PORT = process.env.PORT || 3306;
-
 
 // Express middleware
 app.use(express.urlencoded({ extended: false }));
@@ -24,33 +20,55 @@ const apiRoutes = require('./routes/apiRoutes');
 // use my api routes
 app.use('/api', apiRoutes);
 
+// api link for department commands
+const {
+  viewDepartments,
+  addDepartment
+} = require ('./routes/apiRoutes/employeeRoute');
+
+
+// api link for role commands
+const {
+  viewRoles,
+  addRole
+} = require ('./routes/apiRoutes/roleRoute');
+
+// api link for employee commands
+const {
+  viewEmployees,
+  addEmployee,
+  updateEmployee
+} = require ('./routes/apiRoutes/employeeRoute');
+
+
+
 // Default response for any other request (Not Found)
 app.use((req, res) => {
   res.status(404).end();
 });
 
-// Start server after DB connection
-// db.on('open', () => {
-//   app.listen(PORT, () => {
-//     console.log(`Server running on port ${PORT}`);
-//   });
-  
-// });
-
 // intiate CLI prompt
-inquirer
-  .prompt([
-    {
+const answer = inquirer.prompt([
+  {
     type: 'list',
     name: 'selectMenu',
     message: 'Choose an option',
-    choices: ['View All Departments', 'View All Roles', 'View All Employees', 'Add a Department', 'Add a Role', 'Add an Employee', 'Update an Employee Role'],
+    choices: [
+      'View All Departments', 
+    'View All Roles', 
+    'View All Employees', 
+    'Add a Department', 
+    'Add a Role', 
+    'Add an Employee', 
+    'Update an Employee Role'
+    ]
     },
-  ])
-  .then(answer => {
-    console.log(answer);
-  })
+  ]);
+  
+
+
   // if view departments, return departments table
+  
 
   // if view roles, return job title, role id, department role is in, and salary for role
 
