@@ -3,9 +3,18 @@ const express = require('express');
 const router = express.Router();
 const db = require('../../db/database');
 
-// api route to get cli input
-router.get('/departments', (req, res) => {
-    
-})
+// get all departments
+function viewDepartments() {
+    console.log("");
+    // let query = `SELECT * FROM department`;
+    // const rows = await.db.query(query);
+    // let departmentNames = [];
+    // for ()
+};
+
+module.exports = {
+    viewDepartments,
+    //addDepartment
+};
 
 module.exports = router;

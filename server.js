@@ -40,15 +40,20 @@ const {
   updateEmployeeRole
 } = require ('./routes/apiRoutes/employeeRoute');
 
-
-
 // Default response for any other request (Not Found)
 app.use((req, res) => {
   res.status(404).end();
 });
 
+
+
+
+
+
 // intiate CLI prompt
-const answer = inquirer.prompt([
+async function init() {
+
+const answer =  await inquirer.prompt([
   {
     type: 'list',
     name: 'selectMenu',
@@ -103,7 +108,11 @@ switch(answer.action.toLowerCase()) {
     break;
   
 
+  }
 }
+init();
+
+
   
 
 
