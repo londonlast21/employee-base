@@ -63,7 +63,7 @@ VALUES
 ('Kathy', 'Casper', 2, 1),
 ('Kent', 'Kat', 3, 1),
 ('Karl', 'Marx', 3, 1),
-('John', 'Smith', 4, 1),
+('John', 'Smith', 4, 1)
 ('Jackie', 'Beats', 5, 1),
 --
 ('Cali', 'Fornia', 1, NULL ),

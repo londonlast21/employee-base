@@ -71,10 +71,10 @@ const answer =  await inquirer.prompt([
 ]);
 
 // switch to handle answers
-switch(answer.action.toLowerCase()) {
+switch (answer){
   case 'view all departments':
     // do things
-    viewDepartments();
+    await viewDepartments();
     break;
 
   case 'view all roles':
@@ -108,14 +108,10 @@ switch(answer.action.toLowerCase()) {
     break;
   
 
-  }
-}
-init();
+};
 
 
-  
-
-
+init()
   // if view departments, return departments table
   
 
