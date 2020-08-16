@@ -12,76 +12,120 @@ VALUES
 
 
 /* role table data */
-INSERT INTO role (title, salary ) --needs dept id
+INSERT INTO role (title, salary, department_id) --needs dept id
 VALUES
-('Manager', 45.5 ), -- role 1
-('Assistant Head Chair', 37.6 ), -- role 2
-('Board Member', 34.8 ), --3
-('Professor', 33.0 ), -- 4
-('Teaching Assistant', 22.0 ); -- 5
+
+--- soc dept man-1
+('Manager', 45.5, 1 ), 
+('Assistant Head Chair', 37.6, 1 ), 
+('Board Member', 34.8, 1 ),
+('Professor', 33.0, 1 ), 
+('Teaching Assistant', 22.0, 1 ); 
+
+-- math dept manag-6
+('Manager', 45.5, 2 ),
+('Assistant Head Chair', 37.6, 2 ), 
+('Board Member', 34.8, 2 ),
+('Professor', 33.0, 2 ), 
+('Teaching Assistant', 22.0, 2 ); 
+
+-- english dept man-11
+('Manager', 45.5, 3 ),
+('Assistant Head Chair', 37.6, 3 ), 
+('Board Member', 34.8, 3 ),
+('Professor', 33.0, 3 ), 
+('Teaching Assistant', 22.0, 3 ); 
+
+-- history dept man-16
+('Manager', 45.5, 4 ),
+('Assistant Head Chair', 37.6, 4 ), 
+('Board Member', 34.8, 4 ),
+('Professor', 33.0, 4 ), 
+('Teaching Assistant', 22.0, 4 );
+
+-- science dept man-21
+('Manager', 45.5, 5 ),
+('Assistant Head Chair', 37.6, 5 ), 
+('Board Member', 34.8, 5 ),
+('Professor', 33.0, 5 ), 
+('Teaching Assistant', 22.0, 5 ); 
+
+-- phys ed dept mna-26
+('Manager', 45.5, 6 ),
+('Assistant Head Chair', 37.6, 6 ), 
+('Board Member', 34.8, 6 ),
+('Professor', 33.0, 6 ), 
+('Teaching Assistant', 22.0, 6 );
+
+-- drama dept man-31
+('Manager', 45.5, 7 ),
+('Assistant Head Chair', 37.6, 7), 
+('Board Member', 34.8, 7),
+('Professor', 33.0, 7), 
+('Teaching Assistant', 22.0, 7); 
 
 ----------------
 
 /* employee table data */ -- needs role id
-INSERT INTO employee (first_name, last_name, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
 
 -- soc department
-('Kevin', 'Cookie', NULL ), -- is manager
-('Kathy', 'Casper', ), -- ast head
-('Kent', 'Kat', ), -- board
-('Karl', 'Marx', ), --board mem
-('John', 'Smith', ), -- prof
-('Jackie', 'Beats', ); -- ta
+('Kevin', 'Cookie', 1,  NULL ), -- is manager
+('Kathy', 'Casper', 2, 1), -- ast head
+('Kent', 'Kat', 3, 1), -- board
+('Karl', 'Marx', 3, 1), --board mem
+('John', 'Smith', 4, 1), -- prof
+('Jackie', 'Beats', 5, 1); -- ta
 
 -- math dept
-('Cali', 'Fornia', NULL ), -- is manager
-('Erika', 'Klash', ), -- ast head
-('Monnikkie', 'Shame', ), -- board
-('Abhora', 'Bites', ), --board mem
-('Evah', 'Destruction', ), -- prof
-('Hollow', 'Eve', ); -- ta
+('Cali', 'Fornia', 1, NULL ), -- is manager
+('Erika', 'Klash', 2, 6), -- ast head
+('Monnikkie', 'Shame', 3, 6), -- board
+('Abhora', 'Bites', 3, 6), --board mem
+('Evah', 'Destruction', 4, 6), -- prof
+('Hollow', 'Eve', 5, 6); -- ta
 
 -- english dept
-('Sharon', 'Needles', NULL ), -- is manager
-('Chad', 'Michaels', ), -- ast head
-('Gia', 'Gunn', ), -- board
-('LaShawn', 'Beyond', ), --board mem
-('Bitqch', 'Puddin', ), -- prof
-('Kendra', 'Onixx', ); -- ta
+('Sharon', 'Needles', 1, NULL ), -- is manager
+('Chad', 'Michaels', 2, 11), -- ast head
+('Gia', 'Gunn', 3, 11), -- board
+('LaShawn', 'Beyond', 3, 11), --board mem
+('Bitqch', 'Puddin', 4, 11), -- prof
+('Kendra', 'Onixx', 5, 11); -- ta
 
 -- history dept
-('Alaska', '5000', NULL ), -- is manager
-('Willam', 'Bell', ), -- ast head
-('Alyssa', 'Summers', ), -- board
-('Roxxxie', 'Andrews', ), --board mem
-('Landon', 'Cider', ), -- prof
-('Felony', 'Dodger', ); -- ta
+('Alaska', '5000', 1, NULL ), -- is manager
+('Willam', 'Bell', 2, 16), -- ast head
+('Alyssa', 'Summers', 3, 16), -- board
+('Roxxxie', 'Andrews', 3, 16), --board mem
+('Landon', 'Cider', 4, 16), -- prof
+('Felony', 'Dodger', 5, 16); -- ta
 
 --science dept
-('James', 'Majesty', NULL ), -- is manager
-('Phiphi', 'Ohara', ), -- ast head
-('Victoria', 'Black', ), -- board
-('Dollya', 'Black', ), --board mem
-('Louisianna', 'Purchase', ), -- prof
-('Maxi', 'Glamour', ); -- ta
+('James', 'Majesty', 1, NULL ), -- is manager
+('Phiphi', 'Ohara', 2, 21), -- ast head
+('Victoria', 'Black', 3, 21), -- board
+('Dollya', 'Black', 3, 21), --board mem
+('Louisianna', 'Purchase', 4, 21), -- prof
+('Maxi', 'Glamour', 5, 21); -- ta
 
 -- phys ed dept
-('Priscilla', 'Chambers', NULL ), -- is manager
-('Maddelyn', 'Hatter', ), -- ast head
-('Adore', 'Delano', ), -- board
-('Alyssa', 'Edwards', ), --board mem
-('Kim', 'Chi', ), -- prof
-('Nina', 'West', ); -- ta
+('Priscilla', 'Chambers', 1, NULL ), -- is manager
+('Maddelyn', 'Hatter', 2, 26), -- ast head
+('Adore', 'Delano', 3, 26), -- board
+('Alyssa', 'Edwards', 3, 26), --board mem
+('Kim', 'Chi', 4, 26), -- prof
+('Nina', 'West', 5, 26); -- ta
 
 
 -- drama dept
-('Jiggly', 'Caliente', NULL ), -- is manager
-('Nina', 'Flowers', ), -- ast head
-('Tammie', 'Brown', ), -- board
-('Pandora', 'Boxx', ), --board mem
-('Morgan', 'McMichaels', ), -- prof
-('Carmen', 'Carrera', ); -- ta
+('Jiggly', 'Caliente', 1, NULL ), -- is manager
+('Nina', 'Flowers', 2, 31), -- ast head
+('Tammie', 'Brown', 3, 31), -- board
+('Pandora', 'Boxx', 3, 31), --board mem
+('Morgan', 'McMichaels', 4, 31), -- prof
+('Carmen', 'Carrera', 5, 31); -- ta
 
 
 
