@@ -5,16 +5,9 @@ const db = require('../../db/database');
 
 // get all departments
 const viewDepartments = () => {
-    return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM departments`;
-        db.query(query, (err, results) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(results);
-            }
-        });
-    });
+        let query = `SELECT * FROM department`;
+        return db.query(query);
+    
 };
 
 
@@ -24,4 +17,4 @@ module.exports = {
     //addDepartment
 };
 
-module.exports = router;
+//module.exports = router;

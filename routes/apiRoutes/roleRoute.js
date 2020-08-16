@@ -3,4 +3,13 @@ const express = require('express');
 const router = express.Router();
 const db = require('../../db/database');
 
-module.exports = router;
+// get all roles
+const viewRoles = () => {
+    let query = `SELECT * FROM roles`;
+    return db.query(query)
+    
+}
+
+module.exports = {
+    viewRoles,
+};
