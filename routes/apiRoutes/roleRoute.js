@@ -30,8 +30,8 @@ const addRole = () => {
     }
 
 ]).then
-(function(res){
-    db.query(`INSERT INTO role VALUES (?, ?, ?)`, [res.role],
+(function(res) {
+    db.query(`INSERT INTO role VALUES (?, ?, ?)`, [res.title, res.salary, res.department_id],
     function(err, data) {
         if (err) throw err;
         console.log("role added");

@@ -89,7 +89,7 @@ switch (answer.selectMenu) {
     break;
 
   case 'Update an Employee Role':
-    let updateEmp = await updateEmployeeRole();
+    let updateEmp = await updateEmployee();
     console.log(updateEmp);
     break;
   
@@ -98,6 +98,7 @@ switch (answer.selectMenu) {
     break;
   }
 }
+
 
 init();
 
