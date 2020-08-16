@@ -79,8 +79,8 @@ switch (answer.selectMenu) {
     break;
 
   case 'Add a Role':
-    let addRole = await addRole();
-    console.log(addRole);
+    let addArole = await addRole();
+    console.log(addArole);
     break;
 
   case 'Add an Employee':
