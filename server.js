@@ -54,7 +54,7 @@ const answer = inquirer.prompt([
     name: 'selectMenu',
     message: 'Choose an option',
     choices: [
-      'View All Departments', 
+    'View All Departments', 
     'View All Roles', 
     'View All Employees', 
     'Add a Department', 
@@ -62,8 +62,41 @@ const answer = inquirer.prompt([
     'Add an Employee', 
     'Update an Employee Role'
     ]
-    },
-  ]);
+  },
+]);
+
+// switch to handle answers
+switch(answer.action.toLowerCase()) {
+  case 'view all departments':
+    // do things
+    break;
+
+  case 'view all roles':
+    // do things
+    break;
+
+  case 'view all employees':
+    // do things
+    break;
+  
+  case 'add a department':
+    // do things
+    break;
+
+  case 'add a role':
+    // do things
+    break;
+
+  case 'add an employee':
+    // do things
+    break;
+
+  case 'update an employee role':
+    // do things
+    break;
+  
+
+}
   
 
 
