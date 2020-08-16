@@ -5,7 +5,7 @@ const db = require('../../db/database');
 
 // get all departments
 function viewDepartments() {
-    console.log("");
+    console.log("hi");
     // let query = `SELECT * FROM department`;
     // const rows = await.db.query(query);
     // let departmentNames = [];
