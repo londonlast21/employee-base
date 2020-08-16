@@ -47,9 +47,6 @@ app.use((req, res) => {
 
 
 
-
-
-
 // intiate CLI prompt
 async function init() {
 
@@ -109,9 +106,15 @@ switch (answer){
   
 
 };
+};
 
 
-init()
+init();
+
+
+  
+
+
   // if view departments, return departments table
   
 
