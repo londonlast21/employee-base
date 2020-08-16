@@ -3,24 +3,10 @@
 const inquirer = require('inquirer');
 const cTable = require('console.table');
 const express = require('express');
-//const router = express.Router();
-
-// express stuff start
-//const app = express();
-// create the connection to localHost
-//const PORT = process.env.PORT || 3306;
-
-// Express middleware
-//app.use(express.urlencoded({ extended: false }));
-//app.use(express.json());
 
 // require connection to my database
 const db = require('./db/database');
-// require connection to my apiroutes
-//const apiRoutes = require('./routes/apiRoutes');
 
-// use my api routes
-//app.use('/api', apiRoutes);
 
 // // // api link for department commands
 let {
@@ -43,11 +29,6 @@ let {
   addEmployee,
   updateEmployeeRole
 } = require ('./routes/apiRoutes/employeeRoute');
-
-// Default response for any other request (Not Found)
-// app.use((req, res) => {
-//   res.status(404).end();
-// });
 
 // intiate CLI prompt
 async function init() {
@@ -93,23 +74,23 @@ switch (answer.selectMenu) {
     break;
   
   case 'Add a Department':
-    addDepartment = function addDepartment(){};
-    await addDepartment();
+    let addDeps = await addDepartment();
+    console.log(addDeps);
     break;
 
   case 'Add a Role':
-    addRole = function addRole(){};
-    await addRole();
+    let addRole = await addRole();
+    console.log(addRole);
     break;
 
   case 'Add an Employee':
-    addEmployee = function addEmployee(){};
-    await addEmployee();
+    let addEmp = await addEmployee();
+    console.log(addEmp);
     break;
 
   case 'Update an Employee Role':
-    updateEmployeeRole = function updateEmployeeRole(){};
-    await updateEmployeeRole();
+    let updateEmp = await updateEmployeeRole();
+    console.log(updateEmp);
     break;
   
   default:

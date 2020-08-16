@@ -1,5 +1,6 @@
 const mysql = require('mysql2');
-const util = require("util");
+const util = require('util');
+const table = require('console.table');
 
 const con = mysql.createConnection({
     host: "localhost",

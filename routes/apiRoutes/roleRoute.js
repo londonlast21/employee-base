@@ -8,8 +8,41 @@ const viewRoles = () => {
     let query = `SELECT * FROM role`;
     return db.query(query)
     
+};
+
+// add role
+const addRole = () => {
+    inquirer.prompt([{
+        type: 'input',
+        name: 'title',
+        message: 'Enter role name'
+
+    },
+    {
+        type: 'number',
+        name: 'salary',
+        message: 'Enter employee salary'
+    },
+    {
+        type:'input',
+        name: 'department_id',
+        message: 'Enter department for role'
+    }
+
+]).then
+(function(res){
+    db.query(`INSERT INTO role VALUES (?, ?, ?)`, [res.role],
+    function(err, data) {
+        if (err) throw err;
+        console.log("role added");
+    })
+})
+
+
 }
+
 
 module.exports = {
     viewRoles,
+    addRole
 };
