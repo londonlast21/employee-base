@@ -13,12 +13,16 @@ const con = mysql.createConnection({
     // if success connecting
     //console.log("Connected!");
 
-    // then create my 
-    con.query("CREATE DATABASE employees", function (err, result) {
+  // then create my 
+  con.query("CREATE DATABASE employeeBank", function (err, result) {
       if (err) throw err;
       //console.log("Database created");
-    });
-
+  });
+  // con.query("CREATE TABLE /departments", function (err, result) {
+  //   if (err) throw err;
+  //   console.log("dept table created");
+  // });
+  
 
 });
 module.exports = con;
