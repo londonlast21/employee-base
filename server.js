@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const cTable = require('console.table');
 const express = require('express');
+const router = express.Router();
 
 // express stuff start
 const app = express();
@@ -21,20 +22,21 @@ const apiRoutes = require('./routes/apiRoutes');
 app.use('/api', apiRoutes);
 
 // api link for department commands
-const {
+let {
   viewDepartments,
   addDepartment
-} = require ('./routes/apiRoutes/employeeRoute');
+} = require ('./routes/apiRoutes/departmentRoute');
+
 
 
 // api link for role commands
-const {
+let {
   viewRoles,
   addRole
 } = require ('./routes/apiRoutes/roleRoute');
 
 // api link for employee commands
-const {
+let {
   viewEmployees,
   addEmployee,
   updateEmployeeRole
@@ -75,38 +77,38 @@ console.log(answer);
 switch (answer.selectMenu) {
   case 'View All Departments':
     console.log("hello");
-    
-    viewDepartments();
-    
+
+
+    await viewDepartments;
     break;
 
   case 'View All Roles':
-    // do things
+    viewRoles = function viewRoles(){};
     await viewRoles();
     break;
 
   case 'View All Employees':
-    // do things
+    viewEmployees = function viewEmployees(){};
     await viewEmployees();
     break;
   
   case 'Add a Department':
-    // do things
+    addDepartment = function addDepartment(){};
     await addDepartment();
     break;
 
   case 'Add a Role':
-    // do things
+    addRole = function addRole(){};
     await addRole();
     break;
 
   case 'Add an Employee':
-    // do things
+    addEmployee = function addEmployee(){};
     await addEmployee();
     break;
 
   case 'Update an Employee Role':
-    // do things
+    updateEmployeeRole = function updateEmployeeRole(){};
     await updateEmployeeRole();
     break;
   

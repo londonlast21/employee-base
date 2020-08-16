@@ -4,20 +4,15 @@ const router = express.Router();
 const db = require('../../db/database');
 
 // get all departments
-function viewDepartments() {
-    router.get('/department', (req, res) => {
-        const sql = `SELECT * FROM department`;
-        const params = [];
-        db.all(sql, params, (err, rows) => {
-          if (err) {
-            res.status(500).json({ error: err.message });
-            return;
-          }
-      
-          res.json({
-            message: 'success',
-            data: rows
-          });
+const viewDepartments = () => {
+    return new Promise((resolve, reject) => {
+        const query = `SELECT * FROM departments`;
+        db.query(query, (err, results, fields) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(results);
+            }
         });
     });
 };
