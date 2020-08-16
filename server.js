@@ -1,4 +1,5 @@
 // npm to require
+
 const inquirer = require('inquirer');
 const cTable = require('console.table');
 const express = require('express');
@@ -21,7 +22,7 @@ const apiRoutes = require('./routes/apiRoutes');
 // use my api routes
 app.use('/api', apiRoutes);
 
-// api link for department commands
+// // api link for department commands
 let {
   viewDepartments,
   addDepartment
@@ -77,9 +78,8 @@ console.log(answer);
 switch (answer.selectMenu) {
   case 'View All Departments':
     console.log("hello");
-
-
-    await viewDepartments;
+    viewDepartments = function viewDepartments(){};
+    
     break;
 
   case 'View All Roles':

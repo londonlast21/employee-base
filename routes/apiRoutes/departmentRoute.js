@@ -7,7 +7,7 @@ const db = require('../../db/database');
 const viewDepartments = () => {
     return new Promise((resolve, reject) => {
         const query = `SELECT * FROM departments`;
-        db.query(query, (err, results, fields) => {
+        db.query(query, (err, results) => {
             if (err) {
                 reject(err);
             } else {
