@@ -5,8 +5,9 @@ const db = require('../../db/database');
 
 // get all employees
 const viewEmployees = () => {
-    let query = `SELECT * FROM department`;
+    let query = `SELECT * FROM employee`;
     return db.query(query);
+    
 };
 
 module.exports = {

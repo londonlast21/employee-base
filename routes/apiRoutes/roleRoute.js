@@ -5,7 +5,7 @@ const db = require('../../db/database');
 
 // get all roles
 const viewRoles = () => {
-    let query = `SELECT * FROM roles`;
+    let query = `SELECT * FROM role`;
     return db.query(query)
     
 }
