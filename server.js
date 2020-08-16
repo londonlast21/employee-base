@@ -47,6 +47,10 @@ app.use((req, res) => {
 
 // intiate CLI prompt
 async function init() {
+  await intro();
+}
+
+async function intro() {
 
 const answer =  await inquirer.prompt([
   {
@@ -70,7 +74,7 @@ switch (answer) {
   case 'View All Departments':
     // do things
     await viewDepartments();
-    app();
+    intro();
     
     break;
 
@@ -104,9 +108,10 @@ switch (answer) {
     await updateEmployeeRole();
     break;
   
-
-};
-};
+  default:
+    break;
+  }
+}
 
 
 init();
