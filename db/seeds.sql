@@ -1,68 +1,68 @@
 /* department table data */
 INSERT INTO department (name)
 VALUES
-('Sociology'), -- man num 1
-('Math'), -- man num 2
-('English'), -- man num 3
-('History'), -- man num 4
-('Science'), -- man num 5
-('Phys. Ed'), -- man num 6
-('Drama'); -- man num 7
+('Sociology'), 
+('Math'), 
+('English'), 
+('History'), 
+('Science'), 
+('Phys. Ed'), 
+('Drama'); 
 
 
 
 /* role table data */
-INSERT INTO role (title, salary, department_id) --needs dept id
+INSERT INTO role (title, salary, department_id) 
 VALUES
 
---- soc dept man-1
-('Manager', 45.5, 1 ), 
-('Assistant Head Chair', 37.6, 1 ), 
-('Board Member', 34.8, 1 ),
-('Professor', 33.0, 1 ), 
-('Teaching Assistant', 22.0, 1 ); 
 
--- math dept manag-6
-('Manager', 45.5, 2 ),
-('Assistant Head Chair', 37.6, 2 ), 
-('Board Member', 34.8, 2 ),
-('Professor', 33.0, 2 ), 
-('Teaching Assistant', 22.0, 2 ); 
+('Manager', '45.5', 1 ), 
+('Assistant Head Chair', '37.6', 1 ), 
+('Board Member', '34.8', 1 ),
+('Professor', '33.0', 1 ), 
+('Teaching Assistant', '22.0', 1 ); 
 
--- english dept man-11
-('Manager', 45.5, 3 ),
-('Assistant Head Chair', 37.6, 3 ), 
-('Board Member', 34.8, 3 ),
-('Professor', 33.0, 3 ), 
-('Teaching Assistant', 22.0, 3 ); 
 
--- history dept man-16
-('Manager', 45.5, 4 ),
-('Assistant Head Chair', 37.6, 4 ), 
-('Board Member', 34.8, 4 ),
-('Professor', 33.0, 4 ), 
-('Teaching Assistant', 22.0, 4 );
+('Manager', '43.5', 2),
+('Assistant Head Chair', '37.6', 2), 
+('Board Member', '34.3', 2 ),
+('Professor', '34.0', 2 ), 
+('Teaching Assistant', '23.0', 2 ); 
 
--- science dept man-21
-('Manager', 45.5, 5 ),
-('Assistant Head Chair', 37.6, 5 ), 
-('Board Member', 34.8, 5 ),
-('Professor', 33.0, 5 ), 
-('Teaching Assistant', 22.0, 5 ); 
 
--- phys ed dept mna-26
-('Manager', 45.5, 6 ),
-('Assistant Head Chair', 37.6, 6 ), 
-('Board Member', 34.8, 6 ),
-('Professor', 33.0, 6 ), 
-('Teaching Assistant', 22.0, 6 );
+('Manager', '45.5', 3 ),
+('Assistant Head Chair', '37.6', 3 ), 
+('Board Member', '34.8', 3 ),
+('Professor', '33.0', 3 ), 
+('Teaching Assistant', '22.0', 3 ); 
 
--- drama dept man-31
-('Manager', 45.5, 7 ),
-('Assistant Head Chair', 37.6, 7), 
-('Board Member', 34.8, 7),
-('Professor', 33.0, 7), 
-('Teaching Assistant', 22.0, 7); 
+
+('Manager', '45.5', 4 ),
+('Assistant Head Chair', '37.6', 4 ), 
+('Board Member', '34.8', 4 ),
+('Professor', '33.0', 4 ), 
+('Teaching Assistant', '22.0', 4 );
+
+
+('Manager', '45.5', 5 ),
+('Assistant Head Chair', '37.6', 5 ), 
+('Board Member', '34.8', 5 ),
+('Professor', '33.0', 5 ), 
+('Teaching Assistant', '22.0', 5 ); 
+
+
+('Manager', '45.5', 6 ),
+('Assistant Head Chair', '37.6', 6 ), 
+('Board Member', '34.8', 6 ),
+('Professor', '33.0', 6 ), 
+('Teaching Assistant', '22.0', 6 );
+
+
+('Manager', '45.5', 7 ),
+('Assistant Head Chair', '37.6', 7), 
+('Board Member', '34.8', 7),
+('Professor', '33.0', 7), 
+('Teaching Assistant', '22.0', 7); 
 
 ----------------
 
