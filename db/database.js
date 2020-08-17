@@ -20,7 +20,7 @@ con.connect(function(err) {
 con.query = util.promisify(con.query);
  
 var rows = con.promise.query;
-console.table(con.query);
+console.table(rows);
 
 
 module.exports = con;
