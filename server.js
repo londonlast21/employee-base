@@ -60,7 +60,7 @@ console.log(answer);
 switch (answer.selectMenu) {
   case 'View All Departments':
     let deps = await viewDepartments();
-    console.log(deps);
+    //console.log(deps);
     break;
 
   case 'View All Roles':
@@ -101,6 +101,8 @@ switch (answer.selectMenu) {
 
 
 init();
+
+
 
 
   

@@ -8,14 +8,11 @@ const cTable = require('console.table');
 
 // get all departments
 const viewDepartments = () => {
-        let query = `SELECT * FROM department`;
-      
-        
-        return db.query(query);
-
-        
-    
-};
+    con.query('SELECT * FROM department', function(err, res) {
+      if (err) throw err;
+      console.table(res);
+    });
+   };
 
 // add department
 const addDepartment = () => {
