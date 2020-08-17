@@ -32,11 +32,12 @@ const addRole = () => {
         type:'number',
         name: 'department_id',
         message: 'Enter department ID for role'
-    }
+    },
 
 ]).then
 (function(res) {
-    db.query(`INSERT INTO role VALUES (?, ?, ?)`, [res.title, res.salary, res.department_id],
+    console.log(res);
+    db.query(`INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)`, [res.title, res.salary, res.department_id],
     function(err, data) {
         if (err) throw err;
         console.log("role added");
