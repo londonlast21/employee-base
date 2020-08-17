@@ -31,7 +31,7 @@ const addRole = () => {
     {
         type:'number',
         name: 'department_id',
-        message: 'Enter department ID for role'
+        message: 'Enter department ID for role; must be department ID that exists currently'
     },
 
 ]).then
