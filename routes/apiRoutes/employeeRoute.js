@@ -41,7 +41,8 @@ const addEmployee = () => {
 
 ]).then(function(res) {
     db.query(`INSERT INTO employee (first_name, last_name, role_id, manager_id)
-    VALUES (?, ?, ?, ?)`, [res.first_name, res.last_name, res.role_id, res.manager_id], function(err, data) {
+    VALUES (?, ?, ?, ?)`, [res.first_name, res.last_name, res.role_id, res.manager_id], 
+    function(err, data) {
         if (err) throw err;
         console.log("added employee");
     })
