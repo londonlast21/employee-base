@@ -16,6 +16,6 @@ After starting the application, choose an option from the listed menu to access 
 To return to the root menu, use 'ctrl + C' to end the session
 
 ## Link to Walkthrough Video:
-[Walkthrough](https://drive.google.com/file/d/1-LFXuh5FuVdNQgQWpRYupdmz3NWTmCK1/view)
+[Walkthrough](https://drive.google.com/file/d/18pfxWm2n8GEi9TuzPm1w7UFuzDYGdQR2/view)
 
 
