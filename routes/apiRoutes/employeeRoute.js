@@ -58,11 +58,13 @@ const updateEmployee = () => {
         message: 'Enter updated role title'
     }
 ]).then (function (res) {
-    db.query(`UPDATE employee SET role_id = ${res.title} WHERE first_name = ?`), function (err, data) {
+    db.query(`UPDATE employee SET role_id = ${res.title} WHERE id = ${res.first_name}`, 
+    function (err, res) {
         console.log("role id updated");
     }
-})
+)
 }
+)};
 
 module.exports = {
     viewEmployees,
