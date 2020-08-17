@@ -15,4 +15,5 @@ con.connect(function(err) {
   
 });
 con.query = util.promisify(con.query);
+
 module.exports = con;
