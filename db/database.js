@@ -15,7 +15,11 @@ con.connect(function(err) {
   
 });
 
+
+
 con.query = util.promisify(con.query);
+ const rows = con.query;
+        console.table([rows]);
 
 
 module.exports = con;

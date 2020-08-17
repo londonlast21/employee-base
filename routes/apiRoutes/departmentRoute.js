@@ -3,13 +3,17 @@ const express = require('express');
 const router = express.Router();
 const db = require('../../db/database');
 const con = require('../../db/database');
+const cTable = require('console.table');
 
 
 // get all departments
 const viewDepartments = () => {
         let query = `SELECT * FROM department`;
       // return console.table(con.query);
+        
         return db.query(query);
+
+        
 
 
         
