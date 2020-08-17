@@ -59,12 +59,12 @@ const updateEmployee = () => {
         message: 'Enter first name of employee to update',
     },
     {
-        type: 'input',
-        name: 'title',
-        message: 'Enter updated role title'
+        type: '',
+        name: 'role_id',
+        message: 'Enter updated role id'
     }
 ]).then (function (res) {
-    db.query(`UPDATE employee SET role_id = ${res.title} WHERE id = ${res.first_name}`, 
+    db.query('UPDATE employee SET role_id =? WHERE employee.first_name = ?',
     function (err, res) {
         console.log("role id updated");
     }
