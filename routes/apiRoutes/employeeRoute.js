@@ -2,13 +2,18 @@ const inquirer = require('inquirer');
 const express = require('express');
 const router = express.Router();
 const db = require('../../db/database');
+const con = require('../../db/database');
+const cTable = require('console.table');
+
 
 // get all employees
 const viewEmployees = () => {
-    let query = `SELECT * FROM employee`;
-    return db.query(query);
-    
-};
+    con.query('SELECT * FROM employee', function(err, res) {
+      if (err) throw err;
+      console.table(res);
+    });
+   };
+
 
 // add employee
 const addEmployee = () => {

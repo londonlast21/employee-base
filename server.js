@@ -65,7 +65,7 @@ switch (answer.selectMenu) {
 
   case 'View All Roles':
     let roles = await viewRoles();
-    console.log(roles);
+    //console.log(roles);
     break;
 
   case 'View All Employees':

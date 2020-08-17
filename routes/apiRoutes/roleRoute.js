@@ -2,11 +2,15 @@ const inquirer = require('inquirer');
 const express = require('express');
 const router = express.Router();
 const db = require('../../db/database');
+const con = require('../../db/database');
+const cTable = require('console.table');
 
 // get all roles
 const viewRoles = () => {
-    let query = `SELECT * FROM role`;
-    return db.query(query)
+    con.query('SELECT * FROM role', function(err, res) {
+        if (err) throw err;
+        console.table(res);
+    })
     
 };
 
