@@ -27,7 +27,7 @@ let {
 let {
   viewEmployees,
   addEmployee,
-  updateEmployeeRole
+  updateEmployee
 } = require ('./routes/apiRoutes/employeeRoute');
 
 // intiate CLI prompt
@@ -89,8 +89,8 @@ switch (answer.selectMenu) {
     break;
 
   case 'Update an Employee Role':
-    let updateEmp = await updateEmployee();
-    console.log(updateEmp);
+    let updateE = await updateEmployee();
+    console.log(updateE);
     break;
   
   default:
