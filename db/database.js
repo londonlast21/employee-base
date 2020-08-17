@@ -1,6 +1,6 @@
 const mysql = require('mysql2');
 const util = require('util');
-const table = require('console.table');
+const cTable = require('console.table');
 
 const con = mysql.createConnection({
     host: "localhost",
@@ -14,6 +14,8 @@ con.connect(function(err) {
     if (err) throw err;
   
 });
+
 con.query = util.promisify(con.query);
+
 
 module.exports = con;

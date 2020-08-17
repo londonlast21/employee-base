@@ -4,10 +4,15 @@ const router = express.Router();
 const db = require('../../db/database');
 const con = require('../../db/database');
 
+
 // get all departments
 const viewDepartments = () => {
         let query = `SELECT * FROM department`;
+      // return console.table(con.query);
         return db.query(query);
+
+
+        
     
         
     
