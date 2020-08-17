@@ -14,11 +14,6 @@ const viewDepartments = () => {
         return db.query(query);
 
         
-
-
-        
-    
-        
     
 };
 

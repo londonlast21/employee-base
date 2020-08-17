@@ -19,8 +19,8 @@ con.connect(function(err) {
 
 con.query = util.promisify(con.query);
  
-const rows = con.promise.query;
-console.table(rows);
+var rows = con.promise.query;
+console.table(con.query);
 
 
 module.exports = con;
